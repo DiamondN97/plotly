@@ -18,7 +18,7 @@ function buildData(sample)
         var panel = d3.select("#sample-metadata");
         panel.html("");
         // console.log("dropdown", dropdown)
-        Object.entries(metadata).forEach(([key, value]) => { panel.append("h6").text(`${key}: ${value}`);
+        Object.entries(resultArray[0]).forEach(([key, value]) => { panel.append("h6").text(`${key}: ${value}`);
         console.log(key, value);
 
 
@@ -38,7 +38,7 @@ function buildCharts(sample){
         var wfreq = data.metadata.map(d => d.wfreq);
         var metadata = data.metadata;
         var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
-        var results=resultArray[0];
+        var result=resultArray[0];
         var metadata = data.metadata;
         var y_value = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
         
