@@ -1,7 +1,7 @@
 // 153 data subjects
 function buildData(sample)
 {
-        d3.json("../../data/samples.json").then((data)=>{
+        d3.json("../../plotly/data/samples.json").then((data)=>{
         var otu_labels = data.samples.map(d => d.otu_labels[0]);
         var otu_ids = data.samples.map(d => d.otu_ids[0]);
         var sample_values = data.samples.map(d => d.sample_values[0])
@@ -31,7 +31,7 @@ function buildData(sample)
 
 function buildCharts(sample){
 
-    d3.json("../../data/samples.json").then((data) =>{
+    d3.json("../../plotly/data/samples.json").then((data) =>{
         var samples = data.samples;
         var result_list = samples.filter(sampleObj => sampleObj.id == sample);
         var results = result_list[0];
@@ -90,7 +90,7 @@ function init() {
     
     var dropdownMenu = d3.select("#selDataset");
 
-    d3.json("../../data/samples.json").then((data) =>{
+    d3.json("../../plotly/data/samples.json").then((data) =>{
 
         var sampleNames = data.names;
         
