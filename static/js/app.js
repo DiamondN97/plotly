@@ -114,4 +114,5 @@ function optionChanged(newSample) {
     buildData(newSample);
   }
 
+console.log('test');
 init();
