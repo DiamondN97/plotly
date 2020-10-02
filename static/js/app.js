@@ -90,7 +90,7 @@ function init() {
     
     var dropdownMenu = d3.select("#selDataset");
 
-    d3.json("../samples.json").then((data)=>{
+    d3.json("../samples.json").then((data) =>{
 
         var sampleNames = data.names;
         
